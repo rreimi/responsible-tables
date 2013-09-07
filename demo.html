@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/magic-tables.css">
+</head>
+<body>
+    <table id="hola" class="table">
+        <caption>This is table</caption>
+        <thead>
+            <tr>
+               <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Dirección</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2</td>
+            <td>Robert</td>
+            <td>Reimi</td>
+            <td>06/04/1985</td>
+            <td>Guatire, Urb. Alto Grande, Sector Loma Linda</td>
+            <td>robert.reimi@gmail.com</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Andrea</td>
+            <td>Lebrun</td>
+            <td>14/10/1985</td>
+            <td>Calle Santa Clara, Qta Los Primos, La Trinidad</td>
+            <td>andrealebrun@gmail.com</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">adasdas</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <table id="hola2" class="table">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Dirección</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Robert</td>
+            <td>Reimi</td>
+            <td>06/04/1985</td>
+            <td>Guatire, Urb. Alto Grande, Sector Loma Linda</td>
+            <td>robert.reimi@gmail.com</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Andrea</td>
+            <td>Lebrun</td>
+            <td>14/10/1985</td>
+            <td>Calle Santa Clara, Qta Los Primos, La Trinidad</td>
+            <td>andrealebrun@gmail.com</td>
+        </tr>
+    </table>
+</body>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/magic-tables.js"></script>
+<script type="text/javascript">
+
+    //on viewport change
+    //detect viewport size
+
+    jQuery(document).ready(function(){
+//          jQuery('#hola').responsiveTable({
+//              skipColumns:[0,1,2],
+//              displayLabels: true,
+//              skipLabels:[4],
+//              customTitle: '<a href="person/{0}">{1} - {2}</a>',
+//              labelSeparator: ':',
+//              responsiveWidth: 640
+//          });
+
+        jQuery('.table').magicTable(
+            {
+                skipColumns:[0,1,2],
+                displayLabels: true,
+                skipLabels:[4],
+                customTitle: '<a href="person/{0}">{1} - {2}</a>',
+                labelSeparator: ':',
+                responsiveWidth: 640
+            }
+        );
+    });
+</script>
+</html>
+
