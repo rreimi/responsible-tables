@@ -1,3 +1,5 @@
+/*! jQuery magic tables v1.0 | (c) 2013 Robert Reimi  MIT License | magictables.androb.com  */
+
 (function($) {
     $.fn.magicTable = function(opts){
 
