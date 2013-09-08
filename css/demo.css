@@ -63,3 +63,10 @@ h2.subtitle {
         display: none;
     }
 }
+
+.container pre.prettyprint {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    padding-top: 1em;
+    width:60%;
+}

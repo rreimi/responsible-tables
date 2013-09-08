@@ -6,8 +6,8 @@
     <meta content='responsive, tables, plugin, demo, javascript, jquery' name='keywords'/>
     <meta content="Magic tables plugin demo page" name='description'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/magic-tables.css">
-    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/magic-tables.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
 </head>
 <body>
 <div class="container">
@@ -17,7 +17,7 @@
         You can resize the browser to show how each example works.</p>
 
     <h2 class="subtitle">Basic demo</h2>
-    <pre>
+    <pre class="prettyprint">
         &lt;script type="text/javascript"&gt;
             jQuery('.demo-table-1').magicTable();
         &lt;/script&gt;
@@ -62,7 +62,7 @@
     </table>
 
     <h2 class="subtitle">Skip columns demo</h2>
-    <pre>
+    <pre class="prettyprint">
         &lt;script type="text/javascript"&gt;
             jQuery('.demo-table-2').magicTable({
                 skipColumns:[1,4]
@@ -105,7 +105,7 @@
     </table>
 
     <h2 class="subtitle">Skip labels demo</h2>
-    <pre>
+    <pre class="prettyprint">
         &lt;script type="text/javascript"&gt;
             jQuery('.demo-table-3').magicTable({
                 skipLabels:[0,1,4]
@@ -142,7 +142,7 @@
     </table>
 
     <h2 id="custom-title-example" class="subtitle">Custom title/heading demo</h2>
-    <pre>
+    <pre class="prettyprint">
         &lt;script type="text/javascript"&gt;
             jQuery('.demo-table-4').magicTable({
                 customTitle: '&lt;i&gt;{0}&lt;/i&gt;',
@@ -186,7 +186,7 @@
     </table>
 
     <h2 id="full-demo-example" class="subtitle">Full demo</h2>
-    <pre>
+    <pre class="prettyprint">
         &lt;script type="text/javascript"&gt;
             jQuery('.demo-table-5').magicTable({
                 skipColumns:[0,1,2],
@@ -254,6 +254,7 @@
 
 <a class="github-badge" href="https://github.com/rreimi/magic-tables"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 </body>
+<script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="js/magic-tables.js"></script>
 <script type="text/javascript">
