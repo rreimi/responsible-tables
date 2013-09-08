@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery magic tables - Responsive table plugin demo</title>
+    <meta content='responsive, tables, plugin, demo, javascript, jquery' name='keywords'/>
+    <meta content="Magic tables plugin demo page" name='description'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/magic-tables.css">
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>Magic Tables plugin demo</h1>
+    <p>This page shows some ways to customize responsive tables generated with magic tables plugin.
+        You can resize the browser to show how each example works.</p>
+
+    <h2 class="subtitle">Basic demo</h2>
+    <pre>
+        &lt;script type="text/javascript"&gt;
+            jQuery('.demo-table-1').magicTable();
+        &lt;/script&gt;
+    </pre>
+    <table cellpadding="0" cellspacing="0" class="demo-table demo-table-1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Zip</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hasad Rosales</td>
+                <td>venenatis.a@lacus.org</td>
+                <td>Deschambault</td>
+                <td>Odio Tristique Limited</td>
+                <td>2468 Integer Ave</td>
+                <td>11906</td>
+            </tr>
+            <tr>
+                <td>Damian Craig</td>
+                <td>urna.Nullam.lobortis@urna.edu</td>
+                <td>Cornwall</td>
+                <td>Ipsum Dolor Sit LLC</td>
+                <td>7139 Dapibus Rd.</td>
+                <td>83701</td>
+            </tr>
+            <tr>
+                <td>Cody Pacheco</td>
+                <td>nunc@ipsumDonecsollicitudin.org</td>
+                <td>Stokkem</td>
+                <td>Feugiat Corporation</td>
+                <td>1026 A, Av.</td>
+                <td>7595</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="subtitle">Skip columns demo</h2>
+    <pre>
+        &lt;script type="text/javascript"&gt;
+            jQuery('.demo-table-2').magicTable({
+                skipColumns:[1,4]
+            });
+        &lt;/script&gt;
+    </pre>
+    <table cellpadding="0" cellspacing="0"  class="demo-table demo-table-2">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Company</th>
+            <th>Address</th>
+            <th>Zip</th>
+        </tr>
+        <tr>
+            <td>Rafael Weeks</td>
+            <td>ullamcorper.Duis.cursus@egetmetusIn.co.uk</td>
+            <td>Campochiaro</td>
+            <td>Nulla At Consulting</td>
+            <td>124-2663 Tincidunt Ave</td>
+            <td>38578-475</td>
+        </tr>
+        <tr>
+            <td>Evan Moreno</td>
+            <td>diam.dictum.sapien@Phasellusdolor.net</td>
+            <td>Orosei</td>
+            <td>Risus PC</td>
+            <td>Ap #161-3882 Sit Ave</td>
+            <td>5552CX</td>
+        </tr>
+        <tr>
+            <td>Tad Shepard</td>
+            <td>molestie@ornare.net</td>
+            <td>Crieff</td>
+            <td>Sed Auctor Odio Limited</td>
+            <td>Ap #838-818 Curabitur St.</td>
+            <td>1432IG</td>
+        </tr>
+    </table>
+
+    <h2 class="subtitle">Skip labels demo</h2>
+    <pre>
+        &lt;script type="text/javascript"&gt;
+            jQuery('.demo-table-3').magicTable({
+                skipLabels:[0,1,4]
+            });
+        &lt;/script&gt;
+    </pre>
+
+
+    <table cellpadding="0" cellspacing="0"  class="demo-table demo-table-3">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Company</th>
+            <th>Address</th>
+            <th>Zip</th>
+        </tr>
+        <tr>
+            <td>Roth Singleton</td>
+            <td>Proin.non.massa@atfringilla.edu</td>
+            <td>Nantes</td>
+            <td>Orci Limited</td>
+            <td>P.O. Box 188, 8611 Eget St.</td>
+            <td>69697</td>
+        </tr>
+        <tr>
+            <td>Carlos Pratt</td>
+            <td>Nunc.sed@vitaedolor.co.uk</td>
+            <td>Evere</td>
+            <td>Metus Vivamus Incorporated</td>
+            <td>200-4514 Convallis Road</td>
+            <td>H6D 8RM</td>
+        </tr>
+    </table>
+
+    <h2 class="subtitle">Custom heading demo</h2>
+    <pre>
+        &lt;script type="text/javascript"&gt;
+            jQuery('.demo-table-4').magicTable({
+                customTitle: '<i>{0}</i>',
+                skipColumns: [0]
+            });
+        &lt;/script&gt;
+    </pre>
+    <table cellpadding="0" cellspacing="0"  class="demo-table demo-table-4">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Company</th>
+            <th>Address</th>
+            <th>Zip</th>
+        </tr>
+        <tr>
+            <td>Wylie Lee</td>
+            <td>gravida.nunc.sed@ProinmiAliquam.net</td>
+            <td>Bearberry</td>
+            <td>Mollis Corp.</td>
+            <td>Ap #157-1407 Lobortis Ave</td>
+            <td>70798</td>
+        </tr>
+        <tr>
+            <td>George Hoffman</td>
+            <td>ac.mattis.ornare@interdumCurabitur.net</td>
+            <td>Moircy</td>
+            <td>Sed Sem Industries</td>
+            <td>197-6621 Dolor Avenue</td>
+            <td>50787-868</td>
+        </tr>
+        <tr>
+            <td>Lewis Rodgers</td>
+            <td>Nullam.lobortis@nonlaciniaat.co.uk</td>
+            <td>Moio Alcantara</td>
+            <td>Eu Erat Semper Foundation</td>
+            <td>887-9323 Ipsum. Ave</td>
+            <td>92656</td>
+        </tr>
+    </table>
+
+    <h2 class="subtitle">Full demo</h2>
+    <pre>
+        &lt;script type="text/javascript"&gt;
+            jQuery('.demo-table-5').magicTable({
+                skipColumns:[0,1,2],
+                skipLabels:[5],
+                customTitle: '&lt;h2&gt;{0}&lt;/h2&gt; (&lt;i&gt;&lt;a href="maito:{1}"&gt;{1}&lt;/a&gt;&lt;/i&gt;)',
+                labelSeparator: '::'
+            });
+        &lt;/script&gt;
+    </pre>
+
+    <table cellpadding="0" cellspacing="0"  class="demo-table demo-table-5">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Company</th>
+            <th>Address</th>
+            <th>Zip</th>
+        </tr>
+        <tr>
+            <td>Patrick Hatfield</td>
+            <td>Nulla@arcu.net</td>
+            <td>Tavistock</td>
+            <td>Nulla Integer Institute</td>
+            <td>529-375 Libero. Rd.</td>
+            <td>X9R 8Y2</td>
+        </tr>
+        <tr>
+            <td>Rafael Weeks</td>
+            <td>ullamcorper.Duis.cursus@egetmetusIn.co.uk</td>
+            <td>Campochiaro</td>
+            <td>Nulla At Consulting</td>
+            <td>124-2663 Tincidunt Ave</td>
+            <td>38578-475</td>
+        </tr>
+        <tr>
+            <td>Evan Moreno</td>
+            <td>diam.dictum.sapien@Phasellusdolor.net</td>
+            <td>Orosei</td>
+            <td>Risus PC</td>
+            <td>Ap #161-3882 Sit Ave</td>
+            <td>5552CX</td>
+        </tr>
+    </table>
+
+    <h2 class="subtitle orange">Download</h2>
+    <p>
+        <ul>
+            <li>Download javascript and css plugin file</li>
+            <li>Javascript <a href="https://raw.github.com/rreimi/magic-tables/master/js/magic-tables.min.js">here</a></li>
+            <li>Css <a href="https://raw.github.com/rreimi/magic-tables/master/js/magic-tables.min.css">here</a></li>
+            <li>Remember: jQuery library is required</li>
+        </ul>
+
+
+    </p>
+    <p>More detailed usage instructions can be found at <a href="https://github.com/rreimi/magic-tables">github page</a></p>
+</div>
+<footer>
+    Magic tables is licensed under MIT.<br/>
+    Copyright (c) 2013 Robert Reimi</br>
+    <a href="https://twitter.com/rreimi" class="twitter-follow-button" data-show-count="false">Follow @rreimi</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</footer>
+
+<a class="github-badge" href="https://github.com/rreimi/magic-tables"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+</body>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/magic-tables.js"></script>
+<script type="text/javascript">
+
+    //on viewport change
+    //detect viewport size
+
+    jQuery(document).ready(function(){
+
+        //Basic demo
+        jQuery('.demo-table-1').magicTable();
+
+        //Skip columns demo
+        jQuery('.demo-table-2').magicTable({
+            skipColumns:[1,4]
+        });
+
+        //Skip labels demo
+        jQuery('.demo-table-3').magicTable({
+            skipLabels:[0,1,4]
+        });
+
+        //Custom heading demo
+        jQuery('.demo-table-4').magicTable({
+            customTitle: '<i>{0}</i>',
+            skipColumns: [0]
+        });
+
+        //Full demo
+        jQuery('.demo-table-5').magicTable({
+            skipColumns:[0,1,2],
+            skipLabels:[5],
+            customTitle: '<b>{0}</b> <small>(<i><a href="maito:{1}">{1}</a></i>)</small>',
+            labelSeparator: '::'
+        });
+    });
+</script>
+</html>

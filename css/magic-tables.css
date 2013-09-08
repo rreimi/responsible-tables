@@ -1,4 +1,4 @@
-.rt-visible, .rt-table .rt-skip {
+.rt-visible, .rt-block, .rt-table .rt-skip {
     display: none;
 }
 
@@ -21,6 +21,10 @@
 
 .rt-table .rt-visible {
     display: inline;
+}
+
+.rt-table .rt-block {
+    display: block;
 }
 
 .rt-table .rt-lbl {
