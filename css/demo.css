@@ -58,15 +58,20 @@ h2.subtitle {
     background-color: #eee;
 }
 
-@media screen and (max-width:1024px) {
-    .github-badge {
-        display: none;
-    }
-}
-
 .container pre.prettyprint {
     border: 1px solid #ccc;
     background: #fafafa;
     padding-top: 1em;
     width:60%;
 }
+
+@media screen and (max-width:1024px) {
+    .github-badge {
+        display: none;
+    }
+
+    .container pre.prettyprint {
+        width:100%;
+    }
+}
+
