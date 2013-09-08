@@ -19,8 +19,8 @@ Usage
 
 
 - jQuery is required
-- Download the plugin <a href="">magic-tables.min.js</a> js file
-- Download the plugin <a href="">magic-tables.min.css</a> css file
+- Download the plugin <a href="https://raw.github.com/rreimi/magic-tables/master/js/magic-tables.min.js">magic-tables.min.js</a> js file
+- Download the plugin <a href="https://raw.github.com/rreimi/magic-tables/master/css/magic-tables.min.css">magic-tables.min.css</a> css file
 
 
 Include both files in your project and simply call the magicTable plugin over a table:
@@ -73,7 +73,7 @@ You can define simple templates like
 You can reference any column, no matter if that column are in the skipColumns array. 
 In fact, you may want to use this feature in combination with skipColumns to create custom heading for each row in responsive mode and hide referenced columns.
 
-See <a href="http://magictables.androb.com/#custom-title">custom title example</a> in demo page to give a better idea. 
+See <a href="http://magictables.androb.com/#custom-title-example">custom title example</a> in demo page to give a better idea.
 
 
 
