@@ -1,12 +1,12 @@
 /*! jQuery magic tables v1.0 | (c) 2013 Robert Reimi  MIT License | magictables.androb.com  */
+(function(jQuery) {
+    jQuery.fn.magicTable = function(opts){
 
-(function($) {
-    $.fn.magicTable = function(opts){
-
-        var options = $.extend({}, {
+        var options = jQuery.extend({}, {
             skipColumns: [],
             displayLabels: true,
             skipLabels: [],
+            skipFoot: true,
             customTitle: '',
             labelSeparator: '',
             responsiveWidth: 1024
@@ -24,45 +24,59 @@
         }
 
         this.each(function(){
-            //alert(jQuery(this).attr("id"));
             var table = jQuery(this)[0];
+            var theTitle = '', i;
+            var index = 1;
+            var header = new Array();
+            var isFoot = false;
+
             jQuery(this).addClass('magic-table');
 
             if (viewport().width <= options.responsiveWidth){
                 table.className = table.className + " rt-table";
             }
 
-            var header = new Array();
-
-            for(var i = 0; i < table.rows[0].cells.length; i++){
+            for(i = 0; i < table.rows[0].cells.length; i++){
                 header[i] = table.rows[0].cells[i];
             }
 
-            jQuery(table.rows[0]).addClass(' rt-skip');
+            jQuery(table.rows[0]).addClass('rt-skip');
 
-            var index = 1;
-            for(var i = 1; i < table.rows.length; i++){
+            for(i = 1; i < table.rows.length; i++){
 
-                //Skip tfoot & thead
-                if ((table.rows[i].parentNode.nodeName === 'THEAD') || (table.rows[i].parentNode.nodeName === 'TFOOT')){
-                    jQuery(table.rows[i]).addClass(' rt-skip')
+                theTitle = options.customTitle;
+                isFoot = false;
+
+                //Skip thead
+                if (table.rows[i].parentNode.nodeName === 'THEAD'){
+                    jQuery(table.rows[i]).addClass('rt-skip');
                     continue;
                 }
 
-                if ((index) % 2 == 0){
-                    jQuery(table.rows[i]).addClass('rt-odd');
-                } else {
-                    jQuery(table.rows[i]).addClass('rt-even');
+                if (table.rows[i].parentNode.nodeName === 'TFOOT'){
+                    isFoot = true;
+                    theTitle = '';
+
+                    if (options.skipFoot) {
+                        jQuery(table.rows[i]).addClass('rt-skip');
+                        continue;
+                    }
                 }
 
-                index++;
+                if (!isFoot) {
+                    if ((index) % 2 == 0){
+                        jQuery(table.rows[i]).addClass('rt-odd');
+                    } else {
+                        jQuery(table.rows[i]).addClass('rt-even');
+                    }
+                    index++;
+                }
 
-                var theTitle = options.customTitle;
                 for (var j = 0; j < table.rows[i].cells.length; j++){
 
                     var className = table.rows[i].cells[j].className;
 
-                    if (options.skipColumns.indexOf(j) >= 0){
+                    if (!isFoot && options.skipColumns.indexOf(j) >= 0){
                         className += " rt-skip rt-row rt-row-" + j;
                     }
 
